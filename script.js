@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "B": { name: "Misericórdia", questions: [2, 16, 30, 44, 58, 72], alternatives: [
             "Interessar-se pelo sofrimento e carências dos outros",
             "Ter compaixão e estimular os que estão em desgraça",
-            "Auxiliar numa situação que normally provocaria repulsa",
+            "Auxiliar numa situação que normalmente provocaria repulsa",
             "Estar sempre pronto a visitar os enfermos, e os fracos na fé",
             "Estar disposto a ajudar aos outros a carregarem a sua carga",
             "São os assistentes sociais da igreja"
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "F": { name: "Discernimento de Espírito", questions: [6, 20, 34, 48, 62, 76], alternatives: [
             "Ter facilidade em detectar a falsidade e a verdade",
             "Conseguir sentir entre sintomas e causas de uma ação",
-            "Ser altamente intuitivo",
+            "Ser highly intuitivo",
             "Estar disposto a alertar a igreja quando perceber que alguma decisão oferece risco",
             "Em geral esse dom é auxiliar de outros dons"
         ]},
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { text: "Tenho prazer em ser útil na recuperação espiritual de crentes que se afastaram do Senhor e da igreja.", gift: "L" },
         { text: "Tenho alegria se sou solicitado a pregar (nos lares, no templo, ao ar livre etc).", gift: "M" },
         { text: "Quando ajudo uma pessoa necessitada, deixo de lado qualquer pensamento sobre vantagens materiais ou espirituais.", gift: "N" },
-        { text: "De várias alternativas, escolho a opção que normally funciona.", gift: "O" },
+        { text: "De várias alternativas, escolho a opção que normalmente funciona.", gift: "O" },
         { text: "Quando alguma organização a que pertenço tem algum problema a enfrentar, intimamente procuro pensar nas possíveis soluções.", gift: "A" },
         { text: "Sinto-me realizado quando posso fazer algo por uma pessoa doente ou em necessidade.", gift: "B" },
         { text: "Tenho prazer em cooperar nos trabalhos pioneiros de minha igreja, como iniciar um novo ponto de pregação.", gift: "C" },
