@@ -1,101 +1,99 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // --- Estrutura de Dados ---
-    [cite_start]// [cite: 124]
     const gifts = {
         "A": { name: "Administração/Liderança", questions: [1, 15, 29, 43, 57, 71], alternatives: [
-            [cite_start]"Coordenar atividades", // [cite: 197]
-            [cite_start]"Planejar diversas etapas de um plano de ação", // [cite: 198]
-            [cite_start]"Ajudar a detectar os problemas numa organização e na busca de sua solução", // [cite: 199]
-            [cite_start]"Liderança em diversas áreas da igreja (diáconos, evangelização, música, etc.)", // [cite: 200]
-            [cite_start]"Obs.: É possível diferenciar entre administrar (cuidar do presente) e liderar (ter visão de futuro)" // [cite: 201]
+            "Coordenar atividades",
+            "Planejar diversas etapas de um plano de ação",
+            "Ajudar a detectar os problemas numa organização e na busca de sua solução",
+            "Liderança em diversas áreas da igreja (diáconos, evangelização, música, etc.)",
+            "Obs.: É possível diferenciar entre administrar (cuidar do presente) e liderar (ter visão de futuro)"
         ]},
         "B": { name: "Misericórdia", questions: [2, 16, 30, 44, 58, 72], alternatives: [
-            [cite_start]"Interessar-se pelo sofrimento e carências dos outros", // [cite: 202]
-            [cite_start]"Ter compaixão e estimular os que estão em desgraça", // [cite: 214]
-            [cite_start]"Auxiliar numa situação que normalmente provocaria repulsa", // [cite: 215]
-            [cite_start]"Estar sempre pronto a visitar os enfermos, e os fracos na fé", // [cite: 216]
-            [cite_start]"Estar disposto a ajudar aos outros a carregarem a sua carga", // [cite: 217]
-            [cite_start]"São os assistentes sociais da igreja" // [cite: 218]
+            "Interessar-se pelo sofrimento e carências dos outros",
+            "Ter compaixão e estimular os que estão em desgraça",
+            "Auxiliar numa situação que normally provocaria repulsa",
+            "Estar sempre pronto a visitar os enfermos, e os fracos na fé",
+            "Estar disposto a ajudar aos outros a carregarem a sua carga",
+            "São os assistentes sociais da igreja"
         ]},
         "C": { name: "Missionário", questions: [3, 17, 31, 45, 59, 73], alternatives: [
-            [cite_start]"Fundar novos trabalhos", // [cite: 143]
-            [cite_start]"Iniciar uma frente missionária", // [cite: 147]
-            [cite_start]"Ter disposição para ir a outra cidade, Estado ou país para alcançar pessoas", // [cite: 150]
-            [cite_start]"Evangelizar" // [cite: 151]
+            "Fundar novos trabalhos",
+            "Iniciar uma frente missionária",
+            "Ter disposição para ir a outra cidade, Estado ou país para alcançar pessoas",
+            "Evangelizar"
         ]},
         "D": { name: "Conhecimento", questions: [4, 18, 32, 46, 60, 74], alternatives: [
-            [cite_start]"Procurar obter conhecimento e esclarecimentos a respeito da Palavra de Deus", // [cite: 266]
-            [cite_start]"Ter espírito de investigação", // [cite: 267]
-            [cite_start]"Ter facilidade em reconhecer fatos ou verdades chaves das Escrituras", // [cite: 268]
-            [cite_start]"Ter capacidade em perceber e sistematizar os grandes fatos da Bíblia", // [cite: 269]
-            [cite_start]"Em geral esse dom está associado ao dom da profecia, do ensino" // [cite: 270]
+            "Procurar obter conhecimento e esclarecimentos a respeito da Palavra de Deus",
+            "Ter espírito de investigação",
+            "Ter facilidade em reconhecer fatos ou verdades chaves das Escrituras",
+            "Ter capacidade em perceber e sistematizar os grandes fatos da Bíblia",
+            "Em geral esse dom está associado ao dom da profecia, do ensino"
         ]},
         "E": { name: "Serviço/Diaconia", questions: [5, 19, 33, 47, 61, 75], alternatives: [
-            [cite_start]"Descobrir as necessidades a serem supridas na igreja", // [cite: 224]
-            [cite_start]"Estar à disposição para fazer coisas não relacionadas diretamente à Palavra e à oração", // [cite: 224]
-            [cite_start]"Serviço de som/vídeo, portaria da igreja, introdução durante os cultos", // [cite: 225]
-            [cite_start]"Auxiliar na retaguarda de eventos da igreja", // [cite: 225]
-            [cite_start]"É o verdadeiro diaconato" // [cite: 235]
+            "Descobrir as necessidades a serem supridas na igreja",
+            "Estar à disposição para fazer coisas não relacionadas diretamente à Palavra e à oração",
+            "Serviço de som/vídeo, portaria da igreja, introdução durante os cultos",
+            "Auxiliar na retaguarda de eventos da igreja",
+            "É o verdadeiro diaconato"
         ]},
         "F": { name: "Discernimento de Espírito", questions: [6, 20, 34, 48, 62, 76], alternatives: [
-            [cite_start]"Ter facilidade em detectar a falsidade e a verdade", // [cite: 263]
-            [cite_start]"Conseguir sentir entre sintomas e causas de uma ação", // [cite: 264]
-            [cite_start]"Ser altamente intuitivo", // [cite: 265]
-            [cite_start]"Estar disposto a alertar a igreja quando perceber que alguma decisão oferece risco", // [cite: 205]
-            [cite_start]"Em geral esse dom é auxiliar de outros dons" // [cite: 207]
+            "Ter facilidade em detectar a falsidade e a verdade",
+            "Conseguir sentir entre sintomas e causas de uma ação",
+            "Ser altamente intuitivo",
+            "Estar disposto a alertar a igreja quando perceber que alguma decisão oferece risco",
+            "Em geral esse dom é auxiliar de outros dons"
         ]},
         "G": { name: "Evangelista", questions: [7, 21, 35, 49, 63, 77], alternatives: [
-            [cite_start]"Evangelizar (pessoal, frentes missionárias etc)", // [cite: 176]
-            [cite_start]"Expor o Evangelho levando os não crentes à Salvação", // [cite: 177]
-            [cite_start]"Se preocupar com o crescimento espiritual das pessoas" // [cite: 178]
+            "Evangelizar (pessoal, frentes missionárias etc)",
+            "Expor o Evangelho levando os não crentes à Salvação",
+            "Se preocupar com o crescimento espiritual das pessoas"
         ]},
         "H": { name: "Aconselhamento", questions: [8, 22, 36, 50, 64, 78], alternatives: [
-            [cite_start]"Aconselhamento das pessoas para que tenham seus problemas e decisões resolvidas", // [cite: 179]
-            [cite_start]"Ajudar, confortar e encorajar alguém em pecado, para que tenha vitória na vida", // [cite: 180, 181]
-            [cite_start]"Inspirar outros à ação", // [cite: 182]
-            [cite_start]"Despertar novo interesse espiritual nas pessoas" // [cite: 183]
+            "Aconselhamento das pessoas para que tenham seus problemas e decisões resolvidas",
+            "Ajudar, confortar e encorajar alguém em pecado, para que tenha vitória na vida",
+            "Inspirar outros à ação",
+            "Despertar novo interesse espiritual nas pessoas"
         ]},
         "I": { name: "Fé", questions: [9, 23, 37, 51, 65, 79], alternatives: [
-            [cite_start]"Ter a capacidade de ver algo que precisa ser feito e crer que Deus o fará, mesmo parecendo impossível", // [cite: 271]
-            [cite_start]"Ter facilidade de crer em Deus, em situações que normalmente não se creria", // [cite: 272]
-            [cite_start]"Ter uma fé que move montanhas", // [cite: 273]
-            [cite_start]"Ser útil para motivar as pessoas e a igreja em ocasiões de decisões e grandes desafios" // [cite: 274]
+            "Ter a capacidade de ver algo que precisa ser feito e crer que Deus o fará, mesmo parecendo impossível",
+            "Ter facilidade de crer em Deus, em situações que normalmente não se creria",
+            "Ter uma fé que move montanhas",
+            "Ser útil para motivar as pessoas e a igreja em ocasiões de decisões e grandes desafios"
         ]},
         "J": { name: "Ensino", questions: [10, 24, 38, 52, 66, 80], alternatives: [
-            [cite_start]"Obter informações para ESCLARECER A VERDADE", // [cite: 152]
-            [cite_start]"Explanar e transmitir os DETALHES ESPECÍFICOS de um assunto", // [cite: 153]
-            [cite_start]"Esforçar-se para que OUTROS APRENDAM, ensinando a Palavra de Deus", // [cite: 154]
-            [cite_start]"Professor na E.B.D., Escola de Treinamento, Frentes Missionárias" // [cite: 154]
+            "Obter informações para ESCLARECER A VERDADE",
+            "Explanar e transmitir os DETALHES ESPECÍFICOS de um assunto",
+            "Esforçar-se para que OUTROS APRENDAM, ensinando a Palavra de Deus",
+            "Professor na E.B.D., Escola de Treinamento, Frentes Missionárias"
         ]},
         "L": { name: "Pastor-Mestre", questions: [11, 25, 39, 53, 67, 81], alternatives: [
-            [cite_start]"Orientar o povo de Deus quanto ao caminho a seguir no dia-a-dia", // [cite: 192]
-            [cite_start]"Aconselhar e orientar pessoas que estão confusas ou precisando de decisão", // [cite: 193, 194]
-            [cite_start]"Promover alimentação ao povo de Deus ministrando o ensino da Palavra", // [cite: 195]
-            [cite_start]"Socorrer o povo Deus em suas necessidades espirituais", // [cite: 196]
-            [cite_start]"Lembrete: Aspecto básico do trabalho pastoral: alimentação e proteção" // [cite: 139]
+            "Orientar o povo de Deus quanto ao caminho a seguir no dia-a-dia",
+            "Aconselhar e orientar pessoas que estão confusas ou precisando de decisão",
+            "Promover alimentação ao povo de Deus ministrando o ensino da Palavra",
+            "Socorrer o povo Deus em suas necessidades espirituais",
+            "Lembrete: Aspecto básico do trabalho pastoral: alimentação e proteção"
         ]},
         "M": { name: "Profeta", questions: [12, 26, 40, 54, 68, 82], alternatives: [
-            [cite_start]"Pregação", // [cite: 155]
-            [cite_start]"Admoestação ao povo quanto ao caminho de Deus a ser seguido", // [cite: 168]
-            [cite_start]"Em horas de decisões importantes, auxiliar o povo a descobrir o caminho de Deus", // [cite: 169]
-            [cite_start]"Lembrete: Enquanto o profeta convence, o mestre explica" // [cite: 171]
+            "Pregação",
+            "Admoestação ao povo quanto ao caminho de Deus a ser seguido",
+            "Em horas de decisões importantes, auxiliar o povo a descobrir o caminho de Deus",
+            "Lembrete: Enquanto o profeta convence, o mestre explica"
         ]},
         "N": { name: "Repartir", questions: [13, 27, 41, 55, 69, 83], alternatives: [
-            [cite_start]"Procurar conseguir recursos financeiros e materiais para dar e repartir com os outros", // [cite: 237]
-            [cite_start]"Contribuição para capacitar outros que farão coisas que você mesmo não poderia fazer", // [cite: 248]
-            [cite_start]"Sentir-se realizado em ver que com sua contribuição um objetivo é alcançado" // [cite: 249, 250]
+            "Procurar conseguir recursos financeiros e materiais para dar e repartir com os outros",
+            "Contribuição para capacitar outros que farão coisas que você mesmo não poderia fazer",
+            "Sentir-se realizado em ver que com sua contribuição um objetivo é alcançado"
         ]},
         "O": { name: "Sabedoria", questions: [14, 28, 42, 56, 70, 84], alternatives: [
-            [cite_start]"Ter facilidade em perceber e distingüir as verdadeiras causas dos sintomas de uma situação", // [cite: 238]
-            [cite_start]"Ter sempre uma palavra sábia, sensata, moderada para as situações difíceis", // [cite: 239]
-            [cite_start]"Ter a capacidade de pôr o conhecimento para funcionar", // [cite: 240]
-            [cite_start]"Aplicar o conhecimento a uma situação específica", // [cite: 241]
-            [cite_start]"Em reuniões onde haja necessidade de decisão, procurar respostas práticas e sábias" // [cite: 243]
+            "Ter facilidade em perceber e distingüir as verdadeiras causas dos sintomas de uma situação",
+            "Ter sempre uma palavra sábia, sensata, moderada para as situações difíceis",
+            "Ter a capacidade de pôr o conhecimento para funcionar",
+            "Aplicar o conhecimento a uma situação específica",
+            "Em reuniões onde haja necessidade de decisão, procurar respostas práticas e sábias"
         ]}
     };
 
-    [cite_start]// [cite: 15-104]
     const allQuestions = [
         { text: "Gosto de organizar idéias, pessoas, coisas e o tempo, tendo em vista um serviço mais efetivo e produtivo para o Senhor.", gift: "A" },
         { text: "Tenho alegria em trabalhar com as pessoas ignoradas ou desconhecidas da maioria.", gift: "B" },
@@ -184,10 +182,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const curiosities = [
-        [cite_start]"Você sabia? O dom de 'Serviço' também é conhecido como 'Diaconia'!", // [cite: 124, 223]
-        [cite_start]"Curiosidade: O dom de 'Administração' foca em 'cuidar do presente', enquanto 'Liderança' foca em 'abrir janelas para o futuro'!", // [cite: 201]
-        [cite_start]"Dica: O dom de 'Conhecimento' geralmente é um dom auxiliar, associado ao dom da 'Profecia' ou do 'Ensino'.", // [cite: 270]
-        "Você sabia? O trabalho do 'Pastor-Mestre' tem dois aspectos básicos: alimentação e proteção." [cite_start]// [cite: 139]
+        "Você sabia? O dom de 'Serviço' também é conhecido como 'Diaconia'!",
+        "Curiosidade: O dom de 'Administração' foca em 'cuidar do presente', enquanto 'Liderança' foca em 'abrir janelas para o futuro'!",
+        "Dica: O dom de 'Conhecimento' geralmente é um dom auxiliar, associado ao dom da 'Profecia' ou do 'Ensino'.",
+        "Você sabia? O trabalho do 'Pastor-Mestre' tem dois aspectos básicos: alimentação e proteção."
     ];
 
     // --- Variáveis de Estado ---
@@ -289,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const gift = gifts[key];
             const score = scores[key];
             const maxScore = gift.questions.length * 4; // 6 perguntas * 4 pontos
-            [cite_start]const isHighlighted = score >= 17; // [cite: 125]
+            const isHighlighted = score >= 17;
 
             const giftCard = document.createElement("div");
             giftCard.className = "gift-card";
@@ -314,16 +312,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-            // Adiciona evento de clique para expandir/recolher
             giftCard.addEventListener("click", () => {
                 giftCard.classList.toggle("open");
             });
 
-            // Adiciona aos contêineres corretos
             if (isHighlighted) {
-                highlightedGiftsContainer.appendChild(giftCard.cloneNode(true)); // Clona para o topo
+                highlightedGiftsContainer.appendChild(giftCard.cloneNode(true));
                 
-                // Re-adiciona o listener ao nó clonado
                 highlightedGiftsContainer.lastChild.addEventListener("click", (e) => {
                      e.currentTarget.classList.toggle("open");
                 });
@@ -331,7 +326,6 @@ document.addEventListener("DOMContentLoaded", () => {
             allGiftsContainer.appendChild(giftCard);
         });
         
-        // Se nenhum dom for destacado
         if(highlightedGiftsContainer.innerHTML === "") {
             highlightedGiftsContainer.innerHTML = "<p>Nenhum dom atingiu a pontuação de 17. Veja todos os seus resultados abaixo e clique para mais detalhes.</p>"
         }
@@ -342,7 +336,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function restartGame() {
         showScreen(welcomeScreen);
     }
-
 
     // --- Inicialização e Event Listeners ---
     startBtn.addEventListener("click", startGame);
