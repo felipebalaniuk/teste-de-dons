@@ -317,6 +317,15 @@ body {
     transform: translateY(-3px);
 }
 
+/* --- Botão Voltar (Novo) --- */
+#back-to-welcome-btn {
+    display: none; /* Escondido por padrão */
+    width: auto;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
 /* Responsividade */
 @media (max-width: 600px) {
     body {
@@ -341,4 +350,17 @@ body {
     .results-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* --- MODO BIBLIOTECA (Novo) --- */
+/* Esconde tudo que for relacionado a "resultados" */
+.library-mode #results-content,
+.library-mode .gift-score,
+.library-mode #results-footer {
+    display: none;
+}
+
+/* Mostra o botão "Voltar" */
+.library-mode #back-to-welcome-btn {
+    display: inline-block;
 }
