@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { text: "Tenho prazer em ser útil na recuperação espiritual de crentes que se afastaram do Senhor e da igreja.", gift: "L" },
         { text: "Tenho alegria se sou solicitado a pregar (nos lares, no templo, ao ar livre etc).", gift: "M" },
         { text: "Quando ajudo uma pessoa necessitada, deixo de lado qualquer pensamento sobre vantagens materiais ou espirituais.", gift: "N" },
-        { text: "De várias alternativas, escolho a opção que normalmente funciona.", gift: "O" },
+        { text: "De várias alternativas, escolho a opção que normally funciona.", gift: "O" },
         { text: "Quando alguma organização a que pertenço tem algum problema a enfrentar, intimamente procuro pensar nas possíveis soluções.", gift: "A" },
         { text: "Sinto-me realizado quando posso fazer algo por uma pessoa doente ou em necessidade.", gift: "B" },
         { text: "Tenho prazer em cooperar nos trabalhos pioneiros de minha igreja, como iniciar um novo ponto de pregação.", gift: "C" },
@@ -217,6 +217,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const restartBtn = document.getElementById("restart-btn");
     const answerButtons = document.querySelectorAll(".answer-btn");
 
+    // NOVOS ELEMENTOS
+    const libraryBtn = document.getElementById("library-btn");
+    const backToWelcomeBtn = document.getElementById("back-to-welcome-btn");
+    const resultsTitle = document.querySelector("#results-screen h1");
+    // FIM DOS NOVOS ELEMENTOS
+
     const progressBar = document.getElementById("progress-bar");
     const questionCounter = document.getElementById("question-counter");
     const questionText = document.getElementById("question-text");
@@ -257,6 +263,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
             showScreen(testScreen);
         } else {
+            // Garante que o modo biblioteca está desligado
+            resultsScreen.classList.remove("library-mode");
+            resultsTitle.textContent = "Resultados";
             displayResults();
         }
     }
@@ -272,6 +281,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentQuestionIndex % INTERSTITIAL_FREQUENCY === 0 && currentQuestionIndex < TOTAL_QUESTIONS) {
             displayInterstitial();
         } else if (currentQuestionIndex >= TOTAL_QUESTIONS) {
+            // Garante que o modo biblioteca está desligado
+            resultsScreen.classList.remove("library-mode");
+            resultsTitle.textContent = "Resultados";
             displayResults();
         } else {
             displayQuestion();
@@ -284,9 +296,12 @@ document.addEventListener("DOMContentLoaded", () => {
         showScreen(interstitialScreen);
     }
 
+    // Esta função agora é reutilizada para a biblioteca
     function displayResults() {
-        // Atualiza a barra de progresso para 100%
-        progressBar.style.width = `100%`;
+        // Atualiza a barra de progresso para 100% (se for fim de teste)
+        if (currentQuestionIndex >= TOTAL_QUESTIONS) {
+             progressBar.style.width = `100%`;
+        }
 
         highlightedGiftsContainer.innerHTML = "";
         allGiftsContainer.innerHTML = "";
@@ -345,6 +360,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function restartGame() {
+        // Limpa o modo biblioteca e reseta o título
+        resultsScreen.classList.remove("library-mode");
+        resultsTitle.textContent = "Resultados";
+        showScreen(welcomeScreen);
+    }
+
+    // --- NOVAS FUNÇÕES ---
+    function showLibrary() {
+        initializeScores(); // Zera as pontuações
+        displayResults(); // Popula a tela de resultados (com scores 0)
+        
+        // Adiciona a classe que esconde as pontuações e muda o título
+        resultsScreen.classList.add("library-mode");
+        resultsTitle.textContent = "Biblioteca de Dons";
+        
+        showScreen(resultsScreen);
+    }
+
+    function goToWelcomeScreen() {
+        // Limpa o modo biblioteca e reseta o título
+        resultsScreen.classList.remove("library-mode");
+        resultsTitle.textContent = "Resultados";
         showScreen(welcomeScreen);
     }
 
@@ -352,6 +389,11 @@ document.addEventListener("DOMContentLoaded", () => {
     startBtn.addEventListener("click", startGame);
     continueBtn.addEventListener("click", displayQuestion);
     restartBtn.addEventListener("click", restartGame);
+    
+    // NOVOS LISTENERS
+    libraryBtn.addEventListener("click", showLibrary);
+    backToWelcomeBtn.addEventListener("click", goToWelcomeScreen);
+
     answerButtons.forEach(button => {
         button.addEventListener("click", handleAnswer);
     });
