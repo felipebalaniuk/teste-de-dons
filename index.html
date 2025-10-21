@@ -18,6 +18,8 @@
                 <li>Este inventário é baseado tanto na <strong>experiência</strong> como no <strong>interesse</strong> da pessoa.</li>
             </ul>
             <button id="start-btn" class="btn-primary">Começar o Teste!</button>
+            
+            <button id="library-btn" class="btn-secondary">Ver Biblioteca de Dons</button>
         </div>
 
         <div id="test-screen" class="screen">
@@ -51,36 +53,41 @@
         </div>
 
         <div id="results-screen" class="screen">
+            
+            <button id="back-to-welcome-btn" class="btn-secondary">← Voltar</button>
+
             <h1>Resultados</h1>
             
-            <h2>Seus Dons em Destaque</h2>
-            <p>Estes são os dons onde você pontuou 17 ou mais.</p>
-            <div id="highlighted-gifts" class="results-grid">
-                </div>
+            <div id="results-content"> <h2>Seus Dons em Destaque</h2>
+                <p>Estes são os dons onde você pontuou 17 ou mais.</p>
+                <div id="highlighted-gifts" class="results-grid">
+                    </div>
 
-            <hr>
+                <hr>
 
-            <h2>Todos os Dons</h2>
-            <p>Clique em qualquer dom para ver suas pontuações e alternativas práticas.</p>
+                <h2>Todos os Dons</h2>
+                <p>Clique em qualquer dom para ver suas pontuações e alternativas práticas.</p>
+            </div>
+
             <div id="all-gifts-details" class="results-grid">
                 </div>
 
-            <div class="next-steps-card">
-                <h2>E agora? O que fazer com seus dons?</h2>
-                <ul>
-                    <li><strong>Pratique</strong> os dons descobertos e verifique o seu desenvolvimento.</li>
-                    <li><strong>Avalie</strong> a reação da igreja no aproveitamento de seus dons a serviço da comunidade.</li>
-                    <li><strong>Priorize</strong> seus objetivos. Se Deus lhe capacitou com certos dons, Ele quer que você se envolva no seu desenvolvimento de forma prioritária.</li>
-                </ul>
-                <p class="final-question">Para ajudar a identificar seu dom principal, pergunte-se: "Se eu não tivesse quaisquer compromissos... qual dom eu escolheria para me envolver integralmente...?".</p>
-            </div>
+            <div id="results-footer"> <div class="next-steps-card">
+                    <h2>E agora? O que fazer com seus dons?</h2>
+                    <ul>
+                        <li><strong>Pratique</strong> os dons descobertos e verifique o seu desenvolvimento.</li>
+                        <li><strong>Avalie</strong> a reação da igreja no aproveitamento de seus dons a serviço da comunidade.</li>
+                        <li><strong>Priorize</strong> seus objetivos. Se Deus lhe capacitou com certos dons, Ele quer que você se envolva no seu desenvolvimento de forma prioritária.</li>
+                    </ul>
+                    <p class="final-question">Para ajudar a identificar seu dom principal, pergunte-se: "Se eu não tivesse quaisquer compromissos... qual dom eu escolheria para me envolver integralmente...?".</p>
+                </div>
 
-            <button id="restart-btn" class="btn-secondary">Fazer o teste novamente</button>
+                <button id="restart-btn" class="btn-secondary">Fazer o teste novamente</button>
+            </div>
         </div>
 
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
