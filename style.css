@@ -352,7 +352,7 @@ body {
     }
 }
 
-/* --- MODO BIBLIOTECA (Novo) --- */
+/* --- MODO BIBLIOTECA (ESTA PARTE É ESSENCIAL) --- */
 /* Esconde tudo que for relacionado a "resultados" */
 .library-mode #results-content,
 .library-mode .gift-score,
