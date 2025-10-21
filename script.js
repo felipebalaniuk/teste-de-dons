@@ -181,23 +181,23 @@ document.addEventListener("DOMContentLoaded", () => {
         { text: "Tenho facilidade em encontrar soluções simples e práticas no meio de discussões ou de situações de conflito.", gift: "O" }
     ];
 
-   const curiosities = [
-    [cite_start]"Você sabia? A palavra grega 'Charisma', usada para 'dom', significa 'um dom conferido sem mérito ou direito'.",
-    [cite_start]"Curiosidade: Existem quatro listas principais de dons espirituais no Novo Testamento: em Romanos 12, duas em I Coríntios 12, e uma em Efésios 4.",
-    [cite_start]"FATO: O propósito principal dos dons não é para glória pessoal, mas para a 'edificação do corpo de Cristo'.",
-    [cite_start]"DICA: Um erro comum é o 'sentimento de superioridade' por ter um dom que parece mais importante que outros.",
-    "Você sabia? [cite_start]Outro erro comum é achar que os dons são 'sinais de espiritualidade', ou seja, que só são recebidos após atingir certo crescimento espiritual.",
-    [cite_start]"FATO: O dom da 'Fé' (I Co 12.9) não é a fé para salvação (que todos têm), mas uma fé especial para fazer 'grandes coisas para Deus'.",
-    [cite_start]"Curiosidade: A palavra 'Evangelista' (anunciador de boas-novas) só é mencionada três vezes em todo o Novo Testamento.",
-    [cite_start]"DICA: O dom de 'Exortação' (Rm 12.8) não é apenas 'chamar a atenção', mas também envolve confortar e encorajar.",
-    "Você sabia? [cite_start]O dom de 'Ministério' (Rm 12.7) vem da palavra grega 'diakonia', que é a mesma raiz da palavra 'diácono'.",
-    [cite_start]"FATO: O dom de 'Misericórdia' (Rm 12.8) é focado em ajudar pessoas pobres, tristes, aflitas, e especialmente órfãos e viúvas.",
-    [cite_start]"Curiosidade: O dom de 'Governos' (I Co 12.28) está diretamente ligado à capacidade de 'administrar'[cite: 72, 74].",
-    "Você sabia? [cite_start]A função do 'Profeta' no Novo Testamento era menos 'prever o futuro' e mais 'pregar para edificação, exortação e consolação'.",
-    [cite_start]"DICA: A Bíblia recomenda que o dom de 'Interpretação de línguas' deve sempre acompanhar o dom de 'Variedades de línguas'.",
-    [cite_start]"FATO: Paulo disse a Timóteo para 'manter viva a chama do fogo' do dom, como 'assoprar sem parar o fogo' para que a chama não se apague.",
-    [cite_start]"DICA: Os dons devem ser usados com 'moderação' (II Tm 1:7), uma palavra grega que significa 'auto-controle' e 'auto-disciplina', o oposto de auto-exibição."
-];
+    const curiosities = [
+        "Você sabia? A palavra grega 'Charisma', usada para 'dom', significa 'um dom conferido sem mérito ou direito'.",
+        "Curiosidade: Existem quatro listas principais de dons espirituais no Novo Testamento: em Romanos 12, duas em I Coríntios 12, e uma em Efésios 4.",
+        "FATO: O propósito principal dos dons não é para glória pessoal, mas para a 'edificação do corpo de Cristo'.",
+        "DICA: Um erro comum é o 'sentimento de superioridade' por ter um dom que parece mais importante que outros.",
+        "Você sabia? Outro erro comum é achar que os dons são 'sinais de espiritualidade', ou seja, que só são recebidos após atingir certo crescimento espiritual.",
+        "FATO: O dom da 'Fé' (I Co 12.9) não é a fé para salvação (que todos têm), mas uma fé especial para fazer 'grandes coisas para Deus'.",
+        "Curiosidade: A palavra 'Evangelista' (anunciador de boas-novas) só é mencionada três vezes em todo o Novo Testamento.",
+        "DICA: O dom de 'Exortação' (Rm 12.8) não é apenas 'chamar a atenção', mas também envolve confortar e encorajar.",
+        "Você sabia? O dom de 'Ministério' (Rm 12.7) vem da palavra grega 'diakonia', que é a mesma raiz da palavra 'diácono'.",
+        "FATO: O dom de 'Misericórdia' (Rm 12.8) é focado em ajudar pessoas pobres, tristes, aflitas, e especialmente órfãos e viúvas.",
+        "Curiosidade: O dom de 'Governos' (I Co 12.28) está diretamente ligado à capacidade de 'administrar'.",
+        "Você sabia? A função do 'Profeta' no Novo Testamento era menos 'prever o futuro' e mais 'pregar para edificação, exortação e consolação'.",
+        "DICA: A Bíblia recomenda que o dom de 'Interpretação de línguas' deve sempre acompanhar o dom de 'Variedades de línguas'.",
+        "FATO: Paulo disse a Timóteo para 'manter viva a chama do fogo' do dom, como 'assoprar sem parar o fogo' para que a chama não se apague.",
+        "DICA: Os dons devem ser usados com 'moderação' (II Tm 1:7), uma palavra grega que significa 'auto-controle' e 'auto-disciplina', o oposto de auto-exibição."
+    ];
 
     // --- Variáveis de Estado ---
     let currentQuestionIndex = 0;
@@ -359,5 +359,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicia o app
     initializeScores();
     showScreen(welcomeScreen);
-
 });
